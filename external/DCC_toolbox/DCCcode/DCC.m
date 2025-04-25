@@ -173,7 +173,7 @@ fprintf('Running %d pairs: Estimated complete in %s, %05d', n, display_string, i
 for j=1:(p-1)  
     for k=(j+1):p
   
-        [ Ctmat ] = DCCsimple([Dat(:,j) Dat(:,k)]); 
+        [ Ctmat ] = DCCsimple([Dat(:,j) Dat(:,k)], iter); 
         C(j,k,:) = Ctmat(1,2,:); 
         C(k,j,:) = Ctmat(1,2,:); 
 
